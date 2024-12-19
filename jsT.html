@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Js practice</title>
+	
+</head>
+<body>
+<script type="text/javascript">
+
+
+
+window.onerror = function (message, url, lineNo) {  	
+alert( 'Error: ' + message +   		'n Url: ' + url +  'n Line Number: ' + lineNo);  	
+return true;			 
+ }    
+ function getInput() {  	
+ 	try {  		
+ 			var name = prompt('Type your name');  		
+ 			alert('Your name has ' + name.length + ' letters.');			  	
+ 		
+
+ 		} catch (error) {  		
+
+ 						alert('The error was: ' + error.name + '\n The error message was: ' + error.message);  	
+
+ 						} 
+
+ 							finally {  		//do cleanup  	
+ 									}  
+
+ 								}
+ 							  getInput();
+// alert("Solving Equation of Circle in the form Ax^2 + By^2 + Cx + Dy + E = 0.");
+
+// var k = 2**5;
+// alert(k);
+
+// var a = prompt("A = ", "");
+// var b = prompt("B = ", "");
+// var c = prompt("C = ", "");
+// var d = prompt("D = ", "");
+// var e = prompt("E = ", "");
+
+// var g = (c/2);
+// var f = (d/2);
+// var  r = Math.pow(((g*g) + (f*f) - e),(1/2));
+
+// if (a !=b){
+// 	alert("Invalid!!! " + a + "x^2 + " + b + "y^2 + " + c + "x + " + d + "y + " + "e = 0");
+// }
+
+// if (a == 1){
+
+// alert ("Centre = (" + (-g) + ", " + (-f) + ")  radius = "+ r );
+
+// }
+
+// if (a > 1){
+// 		b /= a;
+// 	c /= a;
+// 	d /= a;
+// 	e /= a;
+// 	a /= a;
+// var g = (c/2);
+// var f = (d/2);
+// var  r = Math.sqrt(((g*g) + (f*f) - e))
+// alert ("Centre = (" + (-g) + ", " + (-f) + ")  radius = "+ r );
+
+// }
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

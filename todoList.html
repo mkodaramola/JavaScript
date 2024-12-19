@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>c</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    
+    document.addEventListener('DOMContentLoaded',function () {
+
+        var sb = document.querySelector('#submit');
+        sb.disabled = true;
+
+        document.querySelector('#name').onkeyup = ()=>{
+
+           if(document.querySelector('#name').value.length > 0){
+
+                sb.disabled = false;
+
+           }
+           else{
+            sb.disabled = true;
+           }
+
+        }
+
+       document.querySelector('form').onsubmit= () => {
+
+
+           const name = document.querySelector('#name').value;
+
+         const li = document.createElement('li');
+         li.innerHTML = name;            
+
+            document.querySelector('ul').append(li);
+
+            document.querySelector('#name').value='';
+
+            sb.disabled = true;
+            return false;
+       }
+       
+
+    });
+    
+    
+    </script>
+</head>
+<body>
+    
+    <h1>Todo List</h1>
+    
+
+    <ul></ul>
+
+    <form>
+    
+    <input type="text" autofocus id="name">
+    <input type="submit" id="submit">
+
+
+    </form>
+
+
+</body>
+</html>

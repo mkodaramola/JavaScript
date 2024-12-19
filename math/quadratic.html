@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>quadratic</title>
+	<style type="text/css">
+		body{
+			background: #56C87D;
+			color: B0B0B0;
+		}
+		h1{
+			font-size: 75px;
+		}
+		h3{
+			font-family:cursive;
+		}
+		input{
+			width: 50px;
+			height: 30px;
+			font-size: 30px;	
+		}
+		span{
+			font-family: cursive;
+			font-size: 30px; 
+		}
+		.ads{
+			font-size: 15px;
+			width: 75px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		function solve(){
+
+			var a = document.getElementById('a').value;
+			var b = document.getElementById('b').value;
+			var c = document.getElementById('c').value;
+
+			var p = (-b);
+			var q= (b**2 - (4*a*c))**(0.5);
+			var r= (2*a);
+			var x1 = (p+q)/r;
+			var x2 = (p-q)/r;
+			document.getElementById('x1').innerHTML = x1;
+			document.getElementById('x2').innerHTML = x2;
+
+		}
+
+	</script>
+
+<h1><u>Quadratic Solver</u></h1>
+<br><br>
+<span>
+	<input type="number" id="a" name="cfx2">X<sup>2</sup> + <input type="number" id="b" name="cfx">X + <input type="number" id="c" name="const"> = 0  
+</span>
+<br><br>
+<span class="s1">X1 = </span><span class="s1" id="x1"></span>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<span class="s1">X2 = </span><span class="s1" id="x2"></span>
+<br><br><br><br>
+<input class="ads" type="button" name="solve" value="Get Ans" onclick="solve()">
+
+<br><br><br><br><br><br><br><br><br><br><br>
+<center><blockquote style="background: black; color: white;">Offline Page designed by: Daramola Oluwafemi Michael</blockquote></center>
+<script type="text/javascript">
+	var k = Math.sin(45);
+	document.write("sine 45 = "+k);
+</script>
+</body>
+</html>

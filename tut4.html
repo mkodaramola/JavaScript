@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tut4</title>
+</head>
+<body>
+<script type="text/javascript">
+	var count1=0;
+	var time1;
+	function mycount(){
+		document.getElementById("text").value=count1;
+
+		count1++;
+			time1 = setTimeout(mycount, 1000);
+
+	}
+
+	function stopct(){
+		clearInterval(time1);
+	}
+
+	var count = 20;
+	var time;
+	function myc(){
+
+			document.getElementById('myh').innerHTML=count;
+		count -= 1;
+		if (count < 15){
+			clearInterval(time);
+		}
+	}
+
+	time = setInterval(myc, 1000);
+</script>
+<input type="button" name="but1" value="Start Count" onclick="mycount()">
+<input type="text" name="text" id="text">
+<input type="button" name="but2" value="Stop Count" onclick="stopct()"><br>
+<h1 id="myh"></h1>
+<input type="text" name="text" id="name" onclick="msg()">
+<input type="submit" name="sub" id="oro">
+<input type="button" name="but3" id="show" value="Show input" onclick="alat()">
+</body>
+</html>

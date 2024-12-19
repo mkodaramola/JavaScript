@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WebCam</title>
+	<style type="text/css">
+		div{
+			margin: auto;
+			height: 675px;
+			width: 900px;
+			border:3px solid #777;
+		}
+		video{
+			width: 900px;
+			height: 675px
+			background-color:#333;
+		}
+	</style>
+</head>
+<body bgcolor="white">
+
+	<div>
+		<video autoplay="true" id="vid"></video>
+	</div>
+
+	<script type="text/javascript">
+		var video = document.querySelector("#vid");
+		navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+		if(navigator.getUserMedia){
+			navigator.getUserMedia({video:true},handlerVideo,videoError);
+		}
+
+	function handlerVideo(stream){
+		// The below code works but its deprecated for Google chrome
+		// video.src=window.URL.createObjectURL(stream);
+
+
+		// This works on Google chrome
+		video.srcObject = stream;
+		video.play();
+	}
+	function videoError(e){
+
+	}
+
+	</script>
+
+
+</body>
+</html>

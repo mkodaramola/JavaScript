@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>wind</title>
+</head>
+<body onload="pop()">
+	<script type="text/javascript">
+		function pop(){
+			alert("This will show up on load");
+		}
+		function upcase(){
+			var data = document.getElementById('mon').value;
+			document.getElementById('mok').innerHTML = data.toUpperCase();
+		}
+	</script>
+	<input type="text" name="txt" id="mon" onkeyup="upcase()">
+	<h1 id="mok"></h1>
+</body>
+</html>

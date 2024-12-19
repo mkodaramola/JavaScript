@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RegExpression</title>
+	<script type="text/javascript">
+		
+		document.addEventListener('DOMContentLoaded', function(){
+
+			
+			document.querySelector('#but').onclick = ()=>{
+
+				let str = document.querySelector('#tBox').value;
+
+				str = str.match(/\d+/g);
+
+				try{
+
+
+				if(str === null) {
+					document.write('Null');
+				}
+				else{
+					
+					document.querySelector('#tArea').value = str;
+				}
+
+			}
+
+			catch(e){
+				document.write(e);
+			}
+
+
+			}
+
+
+
+		});
+
+
+
+	</script>
+</head>
+<body>
+
+	<input type="text" name="" id="tBox">
+	<br>
+	<br>
+	<input type="button" name="" id="but" value="Process String">
+	<br>
+	<br>
+	<textarea type="textArea" name="" id="tArea" width="70px" height="100px"></textarea>
+
+
+
+</body>
+</html>

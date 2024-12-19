@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Explanation
+	</title>
+	<style type="text/css">
+		body{
+			background: #56C87D;
+			color: B0B0B0;
+		}
+		h1{
+			font-size: 75px;
+		}
+		h3{
+			font-family:cursive;
+		}
+		input{
+			width: 50px;
+			height: 30px;
+			font-size: 30px;	
+		}
+		span{
+			font-family: cursive;
+			font-size: 30px; 
+		}
+		.ads{
+			font-size: 15px;
+			width: 75px;
+		}
+	</style>
+	<script type="text/javascript">
+		
+function l1(){
+
+	var ct = 0;
+	var time = setInterval(main,1000);
+
+	function main(){
+		var a = document.getElementById('a').value;
+			var b = document.getElementById('b').value;
+			var c = document.getElementById('c').value;
+			var p = (-b);
+			var q= (b**2 - (4*a*c))**(0.5);
+			var r= (2*a);
+			var x1 = (p+q)/r;
+			var x2 = (p-q)/r;
+
+
+
+	var e1 = "Firstly, multiply the co-efficient of X^2 ";
+	var e2 = "which is ";
+	var e3 = a;
+	var e4 = " by the constant ";
+	var e5= c;
+	var e6 = "that is: ";
+	var e7 = (a + " * " + c + " = "+ (a*c));
+
+
+	if (ct==1){
+		document.getElementById("w1").innerHTML = e1;
+	}
+	if (ct==6){
+		document.getElementById("w2").innerHTML = e2;
+	}
+	if (ct==12){
+		document.getElementById("w3").innerHTML = e3;
+	}
+	if (ct==15){
+		document.getElementById("w4").innerHTML = e4;
+	}
+	if (ct==18){
+		document.getElementById("w5").innerHTML = e5;
+	}
+	if (ct==21){
+		document.getElementById("w6").innerHTML = e6;
+	}
+	if (ct==25){
+		document.getElementById("w7").innerHTML = e7;
+	}
+	if (ct==28){
+		document.getElementById("w8").innerHTML = "Then get the co-efficient of X,";
+	}
+	if (ct==30){
+		document.getElementById("w9").innerHTML = "which is ";
+	}
+	if (ct==32){
+		document.getElementById("w10").innerHTML = b;
+	}
+	if (ct==35){
+		document.getElementById("w11").innerHTML = "Now we have: "+ (a*c)+ " <br>and "+ b;
+	}
+	if (ct==37){
+		document.getElementById("w12").innerHTML = (a*c);
+	}
+	if (ct==38){
+		document.getElementById("w13").innerHTML = " and ";
+	}
+	if (ct==40){
+		document.getElementById("w14").innerHTML = b;
+	}
+
+
+ct++;
+	}
+	
+}
+
+
+
+	</script>
+</head>
+<body>
+
+
+
+<input class="ads" type="button" name="yes" value="Explain" onclick="l1()"><br><br>
+
+<span class="s1" id="w1"></span><span class="s1" id="w2"></span><span class="s1" id="w3"></span><span class="s1" id="w4"></span><span class="s1" id="w5"></span>
+<br><br>
+<span class="s1" id="w6"></span>
+<br><br>
+<span class="s1" id="w7"></span>
+<br><br>
+<span class="s1" id="w8"></span><span class="s1" id="w9"></span><span class="s1" id="w10"></span>
+<br><br>
+<span class="s1" id="w11"><span class="s1" id="w12"><span class="s1" id="w13"><span class="s1" id="14">
+</body>
+</html>

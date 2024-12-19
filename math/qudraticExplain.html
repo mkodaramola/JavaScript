@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>quadratic</title>
+	<style type="text/css">
+		body{
+			background: #56C87D;
+			color: B0B0B0;
+		}
+		h1{
+			font-size: 75px;
+		}
+		h3{
+			font-family:cursive;
+		}
+		input{
+			width: 50px;
+			height: 30px;
+			font-size: 30px;	
+		}
+		span{
+			font-family: cursive;
+			font-size: 30px; 
+		}
+		.ads{
+			font-size: 15px;
+			width: 75px;
+		}
+		.s1{
+			font-size: 5px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function solve(){
+			var a = document.getElementById('a').value;
+			var b = document.getElementById('b').value;
+			var c = document.getElementById('c').value;
+			var p = (-b);
+			var q= (b**2 - (4*a*c))**(0.5);
+			var r= (2*a);
+			var x1 = (p+q)/r;
+			var x2 = (p-q)/r;
+			document.getElementById('x1').innerHTML = x1;
+			document.getElementById('x2').innerHTML = x2;
+
+		}
+			
+function l1(){
+
+	var ct = 2;
+	var time = setInterval(main,1000);
+
+	function main(){
+		var a = document.getElementById('a').value;
+			var b = document.getElementById('b').value;
+			var c = document.getElementById('c').value;
+			var p = (-b);
+			var q= (b**2 - (4*a*c))**(0.5);
+			var r= (2*a);
+			var x1 = (p+q)/r;
+			var x2 = (p-q)/r;
+if (a == 0 && b == 0 && c == 0){
+	document.getElementById("w1").innerHTML = "Opps! No problem to explain."
+}
+else{
+
+
+	var e1 = "Firstly, multiply the co-efficient of X^2 ";
+	var e2 = "which is ";
+	var e3 = a;
+	var e4 = " by the constant ";
+	var e5= c;
+	var e6 = "that is: ";
+	var e7 = (a + " * " + c + " = "+ (a*c));
+
+
+	if (ct==3){
+		document.getElementById("w1").innerHTML = e1;
+	}
+	if (ct==5){
+		document.getElementById("w2").innerHTML = e2;
+	}
+	if (ct==7){
+		document.getElementById("w3").innerHTML = e3;
+	}
+	if (ct==9){
+		document.getElementById("w4").innerHTML = e4;
+	}
+	if (ct==11){
+		document.getElementById("w5").innerHTML = e5;
+	}
+	if (ct==13){
+		document.getElementById("w6").innerHTML = e6;
+	}
+	if (ct==16){
+		document.getElementById("w7").innerHTML = e7;
+	}
+	if (ct==18){
+		document.getElementById("w8").innerHTML = "Then get the co-efficient of X,";
+	}
+	if (ct==20){
+		document.getElementById("w9").innerHTML = "which is ";
+	}
+	if (ct==22){
+		document.getElementById("w10").innerHTML = b;
+	}
+	if (ct==24){
+		document.getElementById("w11").innerHTML = "Now we have: ";
+	}
+	if (ct==26){
+		document.getElementById("w12").innerHTML = (a*c);
+	}
+	if (ct==28){
+		document.getElementById("w13").innerHTML = " and ";
+	}
+	if (ct==30){
+		document.getElementById("w14").innerHTML = b;
+	}
+
+
+ct++;
+	}
+}
+}
+
+
+
+
+	</script>
+
+<h1><u>Quadratic Solver</u></h1>
+<br><br>
+<table border="1">
+	<tr>
+		<td>
+				<span>
+					<input type="number" id="a" name="cfx2">X<sup>2</sup> + <input type="number" id="b" name="cfx">X + <input type="number" id="c" name="const"> = 0  
+				</span>
+				<br><br><span style="font-size:50px"class="s1">X1 = </span><span class="s1" style="font-size: 80px;" id="x1"></span>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<span style="font-size: 10px;" class="s1">X2 = </span><span class="s1" style="font-size: 80px;" id="x2"></span>
+				<br><br><br>
+				<input class="ads" type="button" name="solve" value="Get Ans" onclick="solve()">
+				<br>
+				<h3>Do you need an explanation?</h3>
+				<input class="ads" type="button" name="yes" value="Explain" onclick="l1()">
+		</td>
+
+
+
+
+		<td>
+				<span class="s2" id="w1"></span><span class="s2" id="w2"></span><span class="s2" id="w3"></span><span class="s2" id="w4"></span><span class="s2" id="w5"></span>
+				
+				<span class="s2" id="w6"></span>
+			
+				<span class="s2" id="w7"></span>
+			
+				<span class="s2" id="w8"></span><span class="s2" id="w9"></span><span class="s2" style="color: red;" id="w10"></span>
+				<span class="s2" id="w11"><span class="s2" style="color: red;" id="w12"><span class="s2" id="w13"><span class="s2"  style="color: red;" id="14">
+
+		</td>
+	</tr>
+</table>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+<br><br>
+
+
